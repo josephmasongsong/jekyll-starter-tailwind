@@ -13,3 +13,17 @@ exclude:
   - src
   - tailwind.config.js
   - netlify.toml
+
+# Plugins
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-archives
+  - jekyll-menus
+  - jekyll-embeds
+
+# Pagination
+paginate: 6
+paginate_path: /?=:num/
