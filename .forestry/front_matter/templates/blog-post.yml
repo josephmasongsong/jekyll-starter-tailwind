@@ -35,5 +35,18 @@ fields:
     date_format: 
     time_format: 
     display_utc: false
+- name: author
+  type: select
+  default: []
+  config:
+    required: false
+    options:
+    - joseph
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Author
 pages:
 - _posts/2020-08-19-i-love-hispanics-lorem-ipsum-is-the-single-greatest-threat..md
