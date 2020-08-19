@@ -29,8 +29,21 @@ GEM
       rouge (~> 3.0)
       safe_yaml (~> 1.0)
       terminal-table (~> 1.8)
+    jekyll-archives (2.2.1)
+      jekyll (>= 3.6, < 5.0)
+    jekyll-embeds (0.0.8)
+      jekyll
+    jekyll-feed (0.15.0)
+      jekyll (>= 3.7, < 5.0)
+    jekyll-menus (0.6.1)
+      jekyll (>= 3.6, < 5.0)
+    jekyll-paginate (1.1.0)
     jekyll-sass-converter (2.1.0)
       sassc (> 2.0.1, < 3.0)
+    jekyll-seo-tag (2.6.1)
+      jekyll (>= 3.3, < 5.0)
+    jekyll-sitemap (1.4.0)
+      jekyll (>= 3.7, < 5.0)
     jekyll-watch (2.2.1)
       listen (~> 3.0)
     kramdown (2.3.0)
@@ -62,6 +75,15 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll
+  jekyll-archives
+  jekyll-embeds
+  jekyll-feed
+  jekyll-menus
+  jekyll-paginate
+  jekyll-seo-tag
+  jekyll-sitemap
+  kramdown
+  rouge
 
 BUNDLED WITH
    2.1.2
