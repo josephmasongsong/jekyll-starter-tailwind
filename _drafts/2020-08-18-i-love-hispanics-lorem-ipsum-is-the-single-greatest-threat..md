@@ -6,6 +6,5 @@ excerpt: My text is long and beautiful, as, it has been well documented, are var
   Ipsum is calling for a total and complete shutdown of Muslim text entering your
   website.
 featured_image: "/uploads/tipsheader2.png"
-published: 2020-08-18 07:00:00 +0000
 
 ---
