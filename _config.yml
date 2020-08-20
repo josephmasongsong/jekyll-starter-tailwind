@@ -27,3 +27,5 @@ plugins:
 # Pagination
 paginate: 6
 paginate_path: /?=:num/
+
+future: true
