@@ -7,7 +7,6 @@ excerpt: I have a 10 year old son. He has words. He is so good with these words 
   unbelievable. It’s about making placeholder text great again. That’s what people
   want, they want placeholder text to be great again.
 featured_image: "/uploads/youre-fake-news-5c2583.jpg"
-published: 
 
 ---
 He’s not a word hero. He’s a word hero because he was captured. I like text that wasn’t captured. You're telling the enemy exactly what you're going to do. No wonder you've been fighting Lorem Ipsum your entire adult life.
