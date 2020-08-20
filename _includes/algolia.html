@@ -1,0 +1,158 @@
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.6.0/dist/instantsearch.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.6.0/dist/instantsearch.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.6.0/dist/instantsearch-theme-algolia.min.css">
+<base href="{{ site.baseurl }}">
+
+<script>
+const search = instantsearch({
+  appId: '{{ site.algolia.application_id }}',
+  apiKey: '{{ site.algolia.search_only_api_key }}',
+  indexName: '{{ site.algolia.index_name }}'
+});
+
+const hitTemplate = function(hit) {
+  let date = '';
+  if (hit.date) {
+    date = moment.unix(hit.date).format('MMM D, YYYY');
+  }
+  let url = `{{ site.baseurl }}${hit.url}#${hit.anchor}`;
+
+  const title = hit._highlightResult.title.value;
+
+  // let breadcrumbs = '';
+  // if (hit._highlightResult.headings) {
+  //   breadcrumbs = hit._highlightResult.headings.map(match => {
+  //     return `<span class="post-breadcrumb">${match.value}</span>`
+  //   }).join(' > ')
+  // }
+  // const content = hit._highlightResult.html.value;
+
+  return `
+  <div class="flex flex-col my-4 border-t border-gray-200 pt-6">
+
+
+      <div class="">
+
+          <img  class="w-56 float-left" src="${hit.featured_image}">
+
+      <div class="flex flex-col justify-start pl-4">
+          <a href="#" class="text-blue-700 text-sm font-bold uppercase">${hit.categories}</a>
+          <a href="{{ post.url }}" class="text-2xl font-bold hover:text-gray-700 mt-1 pb-4">${title}</a>
+
+          <a href="${hit.url}" class="text-gray-600">${hit.excerpt}</a>
+
+      </div>
+      </div>
+  </div>
+
+  `;
+}
+
+const menuTemplate = function(menuItem) {
+  return `
+    <a href="${menuItem.url}" class="text-sm btn btn-light btn-sm">${menuItem.label.toLowerCase()}</a>
+  `
+}
+
+search.addWidget(
+  instantsearch.widgets.searchBox({
+    container: '#search-searchbar',
+    placeholder: 'Search into posts...',
+    poweredBy: false
+  })
+);
+
+search.addWidget(
+  instantsearch.widgets.hits({
+    container: '#search-hits',
+    templates: {
+      item: hitTemplate
+    }
+  })
+);
+
+search.addWidget(
+  instantsearch.widgets.menu({
+    container: '#menu',
+    attributeName: 'categories',
+    templates: {
+      item: menuTemplate,
+    }
+  })
+);
+
+search.addWidget(
+  instantsearch.widgets.pagination({
+    container: '#pagination',
+  })
+);
+
+// search.addWidget(
+//   instantsearch.widgets.clearRefinements({
+//     container: '#clear-refinements',
+//   })
+// );
+
+
+search.start();
+</script>
+
+<style>
+  .ais-menu--item {
+    display: inline-block;
+    margin-right: 0.25rem;
+  }
+  .ais-hits {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+  /* .ais-hits--item {
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+  } */
+.ais-search-box {
+  max-width: 100%;
+  margin-bottom: 15px;
+}
+.post-item {
+  margin-bottom: 30px;
+}
+.post-link .ais-Highlight {
+  color: #111;
+  font-style: normal;
+  text-decoration: underline;
+}
+.post-breadcrumbs {
+  color: #424242;
+  display: block;
+}
+.post-breadcrumb {
+  font-size: 18px;
+  color: #424242;
+}
+.post-breadcrumb .ais-Highlight {
+  font-weight: bold;
+  font-style: normal;
+}
+.post-snippet .ais-Highlight {
+  color: #2a7ae2;
+  font-style: normal;
+  font-weight: bold;
+}
+.post-snippet img {
+  display: none;
+}
+/* .ais-search-box--powered-by {
+  display: none;
+} */
+</style>

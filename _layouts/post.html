@@ -1,7 +1,22 @@
 ---
 layout: default
 ---
-<article>
-  <h1>{{ page.title }}</h1>
-  {{ content }}
+<article class="w-full md:w-2/3 flex flex-col my-4 pr-10">
+
+  <a href="#" class="text-blue-700 text-sm font-bold uppercase">{{ page.category }}</a>
+  <a href="{{ page.url }}" class="text-4xl font-bold hover:text-gray-700 mt-1">{{ page.title }}</a>
+  <p class="text-sm byline mt-3">
+      By <a href="#" class="font-semibold hover:text-gray-800">David Grzyb</a>, Published on April 25th, 2020
+  </p>
+
+    <a href="#" class="hover:opacity-75">
+        <img class="w-full mt-6" src="{% if page.image contains "://" %}{{ page.featured_image }}{% else %}{{ site.baseurl }}{{ page.featured_image }}{% endif %}">
+    </a>
+    <div class="bg-white flex flex-col justify-start">
+        <p class="excerpt text-2xl text-gray-700 font-medium leading-relaxed">{{ page.excerpt }}</p>
+
+        {{ content }}
+
+    </div>
+
 </article>

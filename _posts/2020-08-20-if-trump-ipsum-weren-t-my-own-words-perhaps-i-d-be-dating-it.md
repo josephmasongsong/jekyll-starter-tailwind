@@ -1,5 +1,5 @@
 ---
-category: mortgage news
+category: tent city
 layout: post
 title: If Trump Ipsum weren’t my own words, perhaps I’d be dating it
 subtitle: 'Lorem Ipsum''s father was with Lee Harvey Oswald prior to Oswald''s being,
@@ -10,6 +10,6 @@ excerpt: Lorem Ipsum's father was with Lee Harvey Oswald prior to Oswald's being
   text great again. Greater than ever before. If Trump Ipsum weren’t my own words,
   perhaps I’d be dating it.
 featured_image: "/uploads/project-lcsn.png"
-published: 
+
 
 ---

@@ -1,0 +1,50 @@
+---
+---
+<!DOCTYPE html>
+<html class="no-js" lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>{{ page.title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css" />
+  </head>
+
+<body class="bg-white font-family-karla">
+
+    {% include header.html %}
+
+
+    {% include categories.html %}
+
+
+    <div class="container mx-auto flex flex-wrap py-6">
+
+      <!-- Posts Section -->
+      <section class="w-full md:w-2/3 flex flex-col items-center px-3">
+
+          {% for post in page.posts %}
+
+            {% include postcard.html %}
+
+          {% endfor %}
+
+
+
+          <!-- Pagination -->
+          <div class="flex items-center py-8">
+              <a href="#" class="h-10 w-10 bg-blue-800 hover:bg-blue-600 font-semibold text-white text-sm flex items-center justify-center">1</a>
+              <a href="#" class="h-10 w-10 font-semibold text-gray-800 hover:bg-blue-600 hover:text-white text-sm flex items-center justify-center">2</a>
+              <a href="#" class="h-10 w-10 font-semibold text-gray-800 hover:text-gray-900 text-sm flex items-center justify-center ml-3">Next <i class="fas fa-arrow-right ml-2"></i></a>
+          </div>
+
+      </section>
+
+      {% include sidebar.html %}
+      
+    </div>
+
+{% include footer.html %}
+
+</body>
+</html>

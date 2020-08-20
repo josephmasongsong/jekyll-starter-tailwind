@@ -1,5 +1,14 @@
 /* purgecss start ignore */
 @tailwind base;
+
+article p:not(.byline) {
+  @apply leading-7 mt-5;
+}
+
+article p.excerpt {
+  @apply leading-9 mt-5;
+}
+
 @tailwind components;
 /* purgecss end ignore */
 @tailwind utilities;

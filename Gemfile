@@ -11,4 +11,5 @@ group :jekyll_plugins do
   gem 'jekyll-archives'
   gem 'kramdown'
   gem 'rouge'
+  gem 'jekyll-algolia', '~> 1.0'
 end

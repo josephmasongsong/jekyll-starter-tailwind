@@ -1,6 +1,6 @@
-title: Tailwind Jekyll Starter Kit
-description: A starter kit for using Tailwind with Jekyll
-
+title: Daily Downtown Eastside
+description: News from Vancouver's Downtown Eastside
+disable_disk_cache: true
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -24,8 +24,24 @@ plugins:
   - jekyll-menus
   - jekyll-embeds
 
+jekyll-archives:
+  enabled:
+    - categories
+  layout: category
+  permalinks:
+    category: '/:name/'
+
+
 # Pagination
 paginate: 6
-paginate_path: /?=:num/
+paginate_path: /page:num/
 
 future: true
+
+permalink: /:categories/:title/
+
+algolia:
+  application_id: 3IMYVOD052
+  index_name: dev_jekylltest
+  search_only_api_key: 2001caa17abe4b90d8824f197ead9584
+  vars: ["title", "excerpt", "subtitle", "date", "url", "categories", "featured_image"]
