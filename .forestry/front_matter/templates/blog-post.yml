@@ -48,3 +48,19 @@ fields:
       file: 
       path: 
   label: Author
+- name: category
+  type: select
+  default: []
+  config:
+    required: false
+    options:
+    - refinancing
+    - homebuying
+    - mortgage news
+    - tools
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Category
