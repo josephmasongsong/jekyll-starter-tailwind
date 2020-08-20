@@ -1,4 +1,5 @@
 ---
+layout: post
 category: refinancing
 title: 'Trump Ipsum is calling for a total and complete shutdown of Muslim text entering
   your website. '

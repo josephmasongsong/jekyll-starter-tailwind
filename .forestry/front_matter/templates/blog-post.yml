@@ -32,8 +32,8 @@ fields:
   description: ''
   config:
     required: false
-    date_format: 
-    time_format: 
+    date_format:
+    time_format:
     display_utc: false
 - name: category
   type: select
@@ -47,9 +47,9 @@ fields:
     - tools
     source:
       type: simple
-      section: 
-      file: 
-      path: 
+      section:
+      file:
+      path:
   label: Category
 pages:
-- _posts/2020-08-20-trump-ipsum-is-calling-for-a-total-and-complete-shutdown-of-muslim-text-entering-your-website..md
+- _posts/2020-08-17-trump-ipsum-is-calling-for-a-total-and-complete-shutdown-of-muslim-text-entering-your-website..md
