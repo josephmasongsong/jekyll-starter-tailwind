@@ -41,10 +41,11 @@ fields:
   config:
     required: false
     options:
-    - refinancing
-    - homebuying
-    - mortgage news
-    - tools
+    - poverty
+    - tent city
+    - gentrification
+    - crime
+    - opioid crisis
     source:
       type: simple
       section: 
