@@ -9,6 +9,5 @@ excerpt: An 'extremely credible source' has called my office and told me that Lo
   Ipsum your entire adult life. Be careful, or I will spill the beans on your placeholder
   text.
 featured_image: "/uploads/p07gdgr6.jpg"
-published: 2020-08-17 07:00:00 +0000
 
 ---
