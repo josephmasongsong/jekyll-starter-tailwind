@@ -40,10 +40,11 @@ fields:
   default: []
   config:
     required: false
-    options: []
+    options:
+    - joseph
     source:
-      type: pages
-      section: data
+      type: simple
+      section: ''
       file: 
       path: 
   label: Author

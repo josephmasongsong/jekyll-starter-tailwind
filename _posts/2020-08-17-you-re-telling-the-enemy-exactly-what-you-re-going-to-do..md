@@ -1,5 +1,5 @@
 ---
-author: []
+author: joseph
 title: 'You''re telling the enemy exactly what you''re going to do. '
 subtitle: 'Look at that text! Would anyone use that? Can you imagine that, the text
   of your next webpage?! '
